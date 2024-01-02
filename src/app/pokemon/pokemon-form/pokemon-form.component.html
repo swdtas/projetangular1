@@ -1,0 +1,52 @@
+<div class="form">
+  <div class="form-content">
+    <form [formGroup]="pokemonForm" (ngSubmit)="onSubmit()">
+      <div class="form-info d-flex item m-5 text-center">
+        <h2>{{title}}</h2>
+        <p *ngIf="submissionSuccess"> Les données ont été envoyées avec succès!</p> 
+      </div>
+      <div class="nom-w3l">
+        <input class="nom" formControlName="nom" placeholder="Nom">
+        <div *ngIf="pokemonForm?.get('nom')?.hasError('required') && pokemonForm?.get('nom')?.touched">
+          Le nom est requis.
+        </div>
+        <div *ngIf="pokemonForm?.get('nom')?.hasError('pattern') && pokemonForm?.get('nom')?.touched">
+          Le nom doit contenir uniquement des lettres, des chiffres et des caractères spéciaux spécifiés.
+        </div>
+      </div>
+      <div class="image-w3l">
+        <input class="image" formControlName="image" placeholder="Image URL">
+      </div>
+      <div class="point-vie-w3l">
+        <input class="point-vie" formControlName="pointVie" placeholder="Point de vie">
+        <div *ngIf="pokemonForm?.get('pointVie')?.hasError('required') && pokemonForm?.get('pointVie')?.touched">
+          Le point de vie est requis.
+        </div>
+        <div *ngIf="pokemonForm?.get('pointVie')?.hasError('pattern') && pokemonForm?.get('pointVie')?.touched">
+          Veuillez saisir une valeur numérique valide.
+        </div>
+      </div>
+
+      <div class="degats-w3l">
+        <input class="degats" formControlName="degats" placeholder="Dégâts">
+        <div *ngIf="pokemonForm?.get('degats')?.hasError('pattern') && pokemonForm?.get('degats')?.touched">
+          Veuillez saisir une valeur numérique valide pour les dégâts.
+        </div>
+      </div>
+
+      <div class="types-w3l">
+        <input class="types" formControlName="types" placeholder="Type">
+        <div *ngIf="pokemonForm?.get('types')?.hasError('required') && pokemonForm?.get('types')?.touched">
+          Le type est requis.
+        </div>
+      </div>
+    <!-- le  *ngIf="pokemonForm.valid || pokemonForm.pristine" permet de cache le bouton lorsque le formulair n'est pas remplie 
+      <div class="submit-agileits" *ngIf="pokemonForm.valid || pokemonForm.pristine">
+        <button class="submit" type="submit" [disabled]="!pokemonForm.valid">Enregistrer</button>
+      </div>-->
+      <div class="submit-agileits">
+        <button class="submit" type="submit" [disabled]="!pokemonForm.valid">Enregistrer</button>
+      </div>   
+    </form>
+  </div>
+</div>

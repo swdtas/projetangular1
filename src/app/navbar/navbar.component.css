@@ -1,0 +1,33 @@
+/* navbar.component.css */
+.navbar {
+    background-color: rgb(9, 135, 32);
+    overflow: hidden;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .navbar li {
+    float: left;
+  }
+  
+  .navbar a {
+    display: block;
+    color: rgb(213, 246, 30);
+    text-align: center;
+    font-weight: 400;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: rgb(213, 246, 30);
+    color: rgb(9, 135, 32);
+  }
+  .navbar li.right {
+    float: right;
+  }

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: "Open Sans", sans-serif;
+    height: 100%;
+    background-color: rgb(241, 241, 243);
+    overflow-x: hidden;
+  }
+
+
+footer {
+    background-color:rgb(161, 160, 154);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center; 
+  }
+  
+  footer p {
+    margin: 0; 
+  }
+  

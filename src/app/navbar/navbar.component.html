@@ -1,0 +1,11 @@
+
+<nav class="navbar">
+    <ul>
+      <li><a routerLink="home">Accueil</a></li>
+      <li *ngIf="authService.isLoggedIn"><a routerLink="/pokemon/add">Ajouter un pokemon</a></li>
+      <li><a  *ngIf="authService.isLoggedIn" routerLink="pokemon/list">Liste des Pokémons</a></li>
+      <li class="right" *ngIf="!authService.isLoggedIn" ><a routerLink="/login">Connexion</a></li>
+      <li class="right" *ngIf="authService.isLoggedIn"><a (click)="logout()">Déconnexion</a></li>
+    </ul>
+  </nav>
+  

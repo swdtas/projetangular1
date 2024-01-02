@@ -1,0 +1,109 @@
+.form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-content {
+    width: 50%;
+    padding: 10px;
+}
+
+form {
+    background-color: rgba(4, 138, 55, 0.75);
+    padding: 10px 10px;
+}
+
+.form-info {
+    margin: 5px;
+    text-align: center;
+}
+
+.form-info h2 {
+    font-size: 38px;
+    font-weight: 600;
+    padding: 27px 0px;
+    color: #E0E7E7;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+}
+
+form p {
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.nom-w3l,
+.image-w3l,
+.point-vie-w3l,
+.degats-w3l,
+.types-w3l {
+    padding: 10px;
+    position: relative;
+}
+
+.nom-w3l span,
+.image-w3l span,
+.point-vie-w3l span,
+.degats-w3l span,
+.types-w3l span {
+    position: absolute;
+    top: 28px;
+    left: 12px;
+}
+input::placeholder {
+    color:rgb(163, 200, 17);
+    font-weight: 900;
+    }
+.nom-w3l input,
+.image-w3l input,
+.point-vie-w3l input,
+.degats-w3l input,
+.types-w3l input {
+    width: 87%;
+    padding: 19px 26px;
+    border: none;
+    outline: none;
+    font-weight: 900;
+    border-bottom: 1px solid #e0e7e7;
+    background: none;
+    color: rgb(255, 255, 255);
+}
+
+.nom-w3l input:hover,
+.image-w3l input:hover,
+.point-vie-w3l input:hover,
+.degats-w3l input:hover,
+.types-w3l input:hover,
+.nom-w3l input:focus,
+.image-w3l input:focus,
+.point-vie-w3l input:focus,
+.degats-w3l input:focus,
+.types-w3l input:focus {
+    border-bottom: 1px dotted;
+}
+
+.submit-agileits {
+    padding: 28px 10px;
+}
+
+.submit-agileits button {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #e1e6e7;
+    color: #29292b;
+    border: none;
+    width: 100%;
+    padding: 16px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.submit-agileits button:hover {
+    background-color: #2b292a;
+    color: #e1e6e7;
+}

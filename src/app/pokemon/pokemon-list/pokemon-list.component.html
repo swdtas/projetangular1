@@ -1,0 +1,30 @@
+<div class="row  justify-content-center align-items-center mt-5">
+  <div class="card m-2" *ngFor="let pokemon of pokemons"appBorderCard >
+    <div class="row">
+      <div class="col-6">
+        <img class="card-img-top img-fluid" [src]="pokemon.image" alt="{{pokemon.nom}}">
+      </div>
+      <div class="col-6">
+        <div class="card-body">
+          <h5 class="card-title">{{pokemon.nom}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Points de vie: {{pokemon.pointVie}}</li>
+          <li class="list-group-item">Dégâts: {{pokemon.degats}}</li>
+          <li class="list-group-item">Type: {{pokemon.types}}</li>
+          <li class="list-group-item">{{ pokemon.created | date: 'dd/MM/yyyy' }}</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="card-body d-flex justify-content-between ">
+      <button type="button" class="btn btn-danger" (click)="deletePokemon(pokemon.id)">
+        Supprimer
+      </button> 
+   
+      <button  type="button" class="btn btn-primary ml-auto" (click)="onAddSnap(pokemon)">
+        <i class="fa-regular fa-heart"></i> Like ({{ pokemon.likes }})
+      </button>
+    </div>
+  </div>
+</div>
